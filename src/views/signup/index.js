@@ -35,13 +35,14 @@ const SignupForm = () => {
               onSubmit={(values, { setSubmitting }) => {
                 setSubmitting(true);
                 const body = {
+                  name: values.email, 
                   firstName: values.fname,
                   lastName: values.lname,
                   email: values.email,
                   phoneNumber: values.phoneNumber,
                 };
 
-                fetch("http://form-api-techcodes.vercel.app/api/post", {
+                fetch("https://form-api-five.vercel.app/api/post", {
                   method: "POST",
                   headers: { "content-type": "application/json" },
                   body: JSON.stringify(body),
