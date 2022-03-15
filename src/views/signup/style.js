@@ -151,3 +151,6 @@ export const SmallText = styled.p`
   ${media.tablet`font-size: 2vw;`};
   ${media.thone`font-size: 4vw;`};
 `;
+export const SuccessSubmit = styled.div`
+  text-align: center;
+`;

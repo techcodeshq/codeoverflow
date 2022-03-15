@@ -3,7 +3,15 @@ import { Container, FormGroup } from "@styles";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Button } from "@components";
-import { SectionWrapper, Area, Circles, Title, FormWrapper, SmallText } from "./style";
+import {
+  SectionWrapper,
+  Area,
+  Circles,
+  Title,
+  FormWrapper,
+  SmallText,
+  SuccessSubmit,
+} from "./style";
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -27,10 +35,12 @@ const SignupForm = () => {
           <Title>Register</Title>
           <FormWrapper>
             {success ? (
-              <SmallText>
-                You have been registered for Code Overflow 2022! Make sure to check your email for
-                further instructions.
-              </SmallText>
+              <SuccessSubmit>
+                <SmallText>
+                  You have been registered for Code Overflow 2022! Make sure to check your email for
+                  further instructions.
+                </SmallText>
+              </SuccessSubmit>
             ) : (
               <Formik
                 initialValues={{
