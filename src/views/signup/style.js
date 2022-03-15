@@ -6,7 +6,6 @@ export const SectionWrapper = styled.section`
   z-index: 2;
   min-height: 100vh;
 
-
   ${media.tablet`padding-top: 20vw;`};
 `;
 const animate = keyframes`
