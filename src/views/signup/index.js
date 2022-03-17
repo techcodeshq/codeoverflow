@@ -48,6 +48,7 @@ const SignupForm = () => {
                   fname: undefined,
                   lname: undefined,
                   phoneNumber: undefined,
+                  questions: undefined,
                 }}
                 validationSchema={ContactSchema}
                 onSubmit={(values, { setSubmitting }) => {
@@ -58,6 +59,7 @@ const SignupForm = () => {
                     lastName: values.lname,
                     email: values.email,
                     phoneNumber: values.phoneNumber,
+                    questions: values.questions,
                   };
 
                   fetch("https://form-api-five.vercel.app/api/post", {
@@ -102,6 +104,16 @@ const SignupForm = () => {
                         name="phoneNumber"
                         placeholder="Phone"
                         autocomplete="phone"
+                      />
+                      <ErrorMessage component="span" name="phoneNumber" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="anyQuestions">Any Questions?</label>
+                      <Field
+                        type="anyQuestions"
+                        name="anyQuestions"
+                        placeholder="FAQ"
+                        autocomplete="off"
                       />
                       <ErrorMessage component="span" name="phoneNumber" />
                     </FormGroup>
