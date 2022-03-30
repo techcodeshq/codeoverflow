@@ -10,7 +10,6 @@ const ButtonStyle = css`
   background-color: var(--theme);
   color: var(--alwayswhite);
   border-radius: 35px;
-
   :disabled {
     background-color: var(--gray);
   }

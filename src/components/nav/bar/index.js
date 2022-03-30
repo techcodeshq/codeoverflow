@@ -1,17 +1,20 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Container } from "@styles";
-import { Icon, Button } from "@components";
-import Menu from "../menu";
 import {
   HeadStickWrapper,
-  NavWrapper,
   LogoWrapper,
+  NavWrapper,
+  NavLinkWrapper,
+  NavLink,
+  RightSideWrapper,
+  CenterWrapper,
+  RightWrapper,
   MenuButton,
   BtnMenuBox,
-  RightSideWrapper,
 } from "./style";
+import { Icon, Button } from "@components";
 
-const Bar = ({ location }) => {
+const Bar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -39,13 +42,21 @@ const Bar = ({ location }) => {
 
   return (
     <HeadStickWrapper data-scroll data-scroll-sticky data-scroll-target="#___sticky">
-      <Container default>
+      <Container>
         <NavWrapper id="header">
           <LogoWrapper to="/">
             <Icon name="logo" />
           </LogoWrapper>
+          <CenterWrapper>
+            <NavLinkWrapper>
+              <NavLink href="">About</NavLink>
+              <NavLink href="">Register</NavLink>
+              <NavLink href="">Sponsors</NavLink>
+              <NavLink href="">FAQ</NavLink>
+            </NavLinkWrapper>
+          </CenterWrapper>
           <RightSideWrapper>
-            <Button href="https://bank.hackclub.com/donations/start/techcodes">Donate</Button>
+            <Button to="/signup">Sign up now</Button>
             <MenuButton aria-label="menu" onClick={toggleMenu}>
               <BtnMenuBox menuOpen={menuOpen}>
                 <span />
@@ -53,7 +64,6 @@ const Bar = ({ location }) => {
               </BtnMenuBox>
             </MenuButton>
           </RightSideWrapper>
-          <Menu menuOpen={menuOpen} toggleMenu={toggleMenu} location={location} />
         </NavWrapper>
       </Container>
     </HeadStickWrapper>

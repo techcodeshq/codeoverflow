@@ -5,6 +5,7 @@ import { Head, Nav, SmoothScroll } from "@components";
 import { GlobalStyle } from "@styles";
 
 const Layout = ({ children, location }) => {
+  console.log(location);
   return (
     <StaticQuery
       query={graphql`
@@ -26,7 +27,7 @@ const Layout = ({ children, location }) => {
 
             <GlobalStyle />
             <div id="___sticky">
-              <Nav location={location} />
+              {location.pathname === "/" && <Nav location={location} />}
               <main>{children}</main>
             </div>
           </>

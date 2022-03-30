@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import media from "./media";
 
+export const DisplayText = styled.h1`
+  font-size: 11vw;
+  font-weight: bold;
+  ${media.thone`font-size: 12vw;`};
+`;
 export const TitleText = styled.h1`
   font-size: 6vw;
   font-weight: bold;
@@ -9,7 +14,7 @@ export const TitleText = styled.h1`
 `;
 export const BigText = styled.p`
   font-size: 4vw;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 129%;
 
   span {

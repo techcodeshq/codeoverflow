@@ -27,14 +27,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
-      options: {
-        apiURL: process.env.STRAPI_API_URL,
-        singleTypes: ["homepage", "about", "global", "volunteer", "partner"],
-        collectionTypes: ["initiatives"],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

@@ -39,8 +39,8 @@ const Head = ({ title, description, image }) => {
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
 
-      <link rel="mask-icon" href={SafariPinnedTab} color="#3e3e3e" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
+      <link rel="mask-icon" href={SafariPinnedTab} color="#5643fb" />
+      <meta name="msapplication-TileColor" content="#f3f3f3" />
 
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
