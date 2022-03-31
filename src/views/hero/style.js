@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DisplayText } from "@styles";
+import { DisplayText, media } from "@styles";
 
 export const CompWrapper = styled.div`
   position: relative;
@@ -9,10 +9,38 @@ export const CompWrapper = styled.div`
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 4vw;
 `;
+export const ComputerWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 60vw;
+  color: var(--gray);
+  z-index: 2;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+`;
+export const ResizeContainer = styled.div`
+  overflow: hidden;
+  width: 100%;
+
+  h1 {
+    font-size: calc(11vw * var(--hero-resize));
+    ${media.thone`font-size: calc(12vw * var(--hero-resize));`};
+  }
+  p {
+    font-size: calc(1.5vw * var(--hero-resize));
+
+    ${media.tablet`font-size: calc(2vw * var(--hero-resize));`};
+    ${media.thone`font-size: calc(4vw * var(--hero-resize));`};
+  }
+`;
 export const MarqueeWrapper = styled(DisplayText)`
-  padding: 32px 0;
+  padding: calc(32px * var(--hero-resize)) 0;
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -44,7 +72,10 @@ export const ClippedText = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-export const Line = styled.div``;
+export const Line = styled.div`
+  overflow: hidden;
+  margin: 0 auto;
+`;
 export const OverflowWrapper = styled.div`
   overflow: hidden;
 `;
@@ -56,14 +87,14 @@ export const CardWrap = styled.div`
 `;
 export const Card = styled.div`
   background-color: var(--secondary);
-  padding: 0 2vw;
-  border-radius: 25px;
+  padding: 0 calc(2vw * var(--hero-resize));
+  border-radius: calc(25px * var(--hero-resize));
   display: flex;
   flex-direction: row;
   align-items: center;
 
   :not(:last-child) {
-    margin-right: 2vw;
+    margin-right: calc(2vw * var(--hero-resize));
   }
 
   p {
@@ -71,12 +102,12 @@ export const Card = styled.div`
   }
 
   svg {
-    width: 40px;
-    height: 40px;
-    margin-right: 1vw;
+    width: calc(40px * var(--hero-resize));
+    height: calc(40px * var(--hero-resize));
+    margin-right: calc(1vw * var(--hero-resize));
   }
 `;
 export const DescriptionWrapper = styled.div`
-  width: 50%;
+  width: calc(50% * var(--hero-resize));
   margin: 0 auto;
 `;

@@ -11,7 +11,7 @@ import {
   InnerCard,
   OverflowWrapper,
 } from "./style";
-import { gsap, Power4 } from "gsap";
+import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -194,17 +194,17 @@ const About = () => {
     br.to(textWraps.current, { yPercent: 100, stagger: 0.15 }, 3.5);
 
     br.to(rectWraps.current, { width: "88%", borderRadius: 75 }, 4.7)
-      .to(rectWraps.current[0], { yPercent: 160 }, 4.6)
-      .to(rectWraps.current[1], { yPercent: 124 }, 4.5)
-      .to(rectWraps.current[2], { yPercent: 88 }, 4.4)
-      .to(rectWraps.current[3], { yPercent: 52 }, 4.3)
-      .to(rectWraps.current[4], { yPercent: 15 }, 4.2)
-      .to(rectWraps.current[5], { yPercent: 130 }, 4.7)
-      .to(rectWraps.current[6], { yPercent: 134 }, 4.7)
-      .to(rectWraps.current[7], { yPercent: 138 }, 4.7)
-      .to(rectWraps.current[8], { yPercent: 142 }, 4.7)
-      .to(rectWraps.current[9], { yPercent: 146 }, 4.7)
-      .to(rectWraps.current[10], { yPercent: 150 }, 4.7);
+      .to(rectWraps.current[0], { yPercent: 192 }, 4.6)
+      .to(rectWraps.current[1], { yPercent: 150 }, 4.5)
+      .to(rectWraps.current[2], { yPercent: 109 }, 4.4)
+      .to(rectWraps.current[3], { yPercent: 67 }, 4.3)
+      .to(rectWraps.current[4], { yPercent: 28 }, 4.2)
+      .to(rectWraps.current[5], { yPercent: 142 }, 4.7)
+      .to(rectWraps.current[6], { yPercent: 144 }, 4.7)
+      .to(rectWraps.current[7], { yPercent: 146 }, 4.7)
+      .to(rectWraps.current[8], { yPercent: 148 }, 4.7)
+      .to(rectWraps.current[9], { yPercent: 150 }, 4.7)
+      .to(rectWraps.current[10], { yPercent: 152 }, 4.7);
 
     rectWraps.current.forEach((element, index) => {
       if (index > 4 && index < 11) {
@@ -233,14 +233,14 @@ const About = () => {
       );
     });
     br.to(rectWraps.current, { height: "32vw" }, 4);
-    br.to(rectWraps.current, { transform: "none", top: "32%", stagger: 1 }, 6);
+    br.to(rectWraps.current, { transform: "none", top: "38%", stagger: 1 }, 6);
 
     ScrollTrigger.create({
       trigger: scrollContainer,
       scroller: "#___gatsby",
       animation: br,
       scrub: true,
-      end: "+=7000",
+      end: "+=15000",
       pin: true,
     });
 
@@ -340,10 +340,10 @@ const About = () => {
                 <InnerCard ref={el => (scheduleRectText.current[5] = el)}>
                   <div>
                     <NormalText>Day 1</NormalText>
-                    <BigText>3:00PM</BigText>
+                    <BigText>7:00PM</BigText>
                   </div>
                   <div>
-                    <TitleText style={{ margin: 0 }}>TEST</TitleText>
+                    <TitleText style={{ margin: 0 }}>Dinner</TitleText>
                   </div>
                 </InnerCard>
               </OverflowWrapper>
@@ -355,10 +355,10 @@ const About = () => {
                 <InnerCard ref={el => (scheduleRectText.current[6] = el)}>
                   <div>
                     <NormalText>Day 1</NormalText>
-                    <BigText>3:00PM</BigText>
+                    <BigText>8:00PM-12:00AM </BigText>
                   </div>
                   <div>
-                    <TitleText style={{ margin: 0 }}>Speaker #1 & #2</TitleText>
+                    <TitleText style={{ margin: 0 }}>Movie Night + Midnight Snack</TitleText>
                   </div>
                 </InnerCard>
               </OverflowWrapper>
@@ -369,11 +369,11 @@ const About = () => {
               <OverflowWrapper>
                 <InnerCard ref={el => (scheduleRectText.current[7] = el)}>
                   <div>
-                    <NormalText>Day 1</NormalText>
-                    <BigText>3:00PM</BigText>
+                    <NormalText>Day 2</NormalText>
+                    <BigText>7:30AM</BigText>
                   </div>
                   <div>
-                    <TitleText style={{ margin: 0 }}>Speaker #1 & #2</TitleText>
+                    <TitleText style={{ margin: 0 }}>Breakfast</TitleText>
                   </div>
                 </InnerCard>
               </OverflowWrapper>
@@ -384,11 +384,11 @@ const About = () => {
               <OverflowWrapper>
                 <InnerCard ref={el => (scheduleRectText.current[8] = el)}>
                   <div>
-                    <NormalText>Day 1</NormalText>
-                    <BigText>3:00PM</BigText>
+                    <NormalText>Day 2</NormalText>
+                    <BigText>10:00AM</BigText>
                   </div>
                   <div>
-                    <TitleText style={{ margin: 0 }}>Speaker #1 & #2</TitleText>
+                    <TitleText style={{ margin: 0 }}>Judging Begins</TitleText>
                   </div>
                 </InnerCard>
               </OverflowWrapper>
@@ -399,11 +399,11 @@ const About = () => {
               <OverflowWrapper>
                 <InnerCard ref={el => (scheduleRectText.current[9] = el)}>
                   <div>
-                    <NormalText>Day 1</NormalText>
-                    <BigText>3:00PM</BigText>
+                    <NormalText>Day 2</NormalText>
+                    <BigText>12:00PM</BigText>
                   </div>
                   <div>
-                    <TitleText style={{ margin: 0 }}>Speaker #1 & #2</TitleText>
+                    <TitleText style={{ margin: 0 }}>Lunch</TitleText>
                   </div>
                 </InnerCard>
               </OverflowWrapper>
@@ -414,11 +414,11 @@ const About = () => {
               <OverflowWrapper>
                 <InnerCard ref={el => (scheduleRectText.current[10] = el)}>
                   <div>
-                    <NormalText>Day 1</NormalText>
-                    <BigText>3:00PM</BigText>
+                    <NormalText>Day 2</NormalText>
+                    <BigText>2:00PM</BigText>
                   </div>
                   <div>
-                    <TitleText style={{ margin: 0 }}>Speaker #1 & #2</TitleText>
+                    <TitleText style={{ margin: 0 }}>Closing & Award Ceremony</TitleText>
                   </div>
                 </InnerCard>
               </OverflowWrapper>

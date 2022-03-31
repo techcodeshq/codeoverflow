@@ -94,7 +94,7 @@ export const ScheduleWrapper = styled.div`
   text-align: center;
   max-width: 60%;
   margin: 0 auto;
-  padding: 6vw 0;
+  padding: 10vw 0;
 
   h1 {
     margin: 0;

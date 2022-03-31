@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --font-family: 'Poppins', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    --hero-resize: 1;
   }
   html {
     box-sizing: border-box;
@@ -75,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
     --blue: #5080FD;
     --purple: #7852E2;
     --undertone: #E4E4E4;
-    --gray: #B4B4B4;
+    --gray: #2B2B2B;
   }
   main {
     position: relative;
