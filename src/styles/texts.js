@@ -10,7 +10,11 @@ export const TitleText = styled.h1`
   font-size: 6vw;
   font-weight: bold;
 
-  ${media.thone`font-size: 12vw;`};
+  @media (min-aspect-ratio: 8 / 5) {
+    font-size: 8vh;
+  }
+
+  ${media.thone`font-size: 9vw;`};
 `;
 export const BigText = styled.p`
   font-size: 4vw;
@@ -47,6 +51,10 @@ export const MidText = styled.p`
 `;
 export const NormalText = styled.p`
   font-size: 1.5vw;
+
+  @media (min-aspect-ratio: 8 / 5) {
+    font-size: 3vh;
+  }
 
   ${media.tablet`font-size: 2vw;`};
   ${media.thone`font-size: 4vw;`};

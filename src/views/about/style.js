@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { TitleText } from "@styles";
+import { media, TitleText } from "@styles";
 
 export const SectionWrapper = styled.section`
   position: relative;
-  min-height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  color: var(--alwayswhite);
 `;
 export const AboutWrapper = styled.div`
   display: flex;
@@ -17,15 +19,20 @@ export const ContainerWrapper = styled.div`
 `;
 export const DescriptionWrapper = styled.div`
   max-width: 68%;
+
+  ${media.thone`max-width: 100%;`};
 `;
 export const OverflowWrapper = styled.div`
   overflow: hidden;
+  display: flex;
+  align-items: center;
 `;
 
 export const TransitionWrapper = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -94,7 +101,12 @@ export const ScheduleWrapper = styled.div`
   text-align: center;
   max-width: 60%;
   margin: 0 auto;
-  padding: 10vw 0;
+  padding: 10vmin 0;
+  ${media.thone`max-width: 100%;`};
+
+  @media (min-aspect-ratio: 8 / 5) {
+    max-width: 100vh;
+  }
 
   h1 {
     margin: 0;

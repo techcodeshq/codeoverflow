@@ -1,4 +1,5 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import { Container } from "@styles";
 import {
   HeadStickWrapper,
@@ -8,46 +9,24 @@ import {
   NavLink,
   RightSideWrapper,
   CenterWrapper,
-  RightWrapper,
-  MenuButton,
-  BtnMenuBox,
 } from "./style";
 import { Icon, Button } from "@components";
 
 const Bar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  function toggleMenu() {
-    setMenuOpen(!menuOpen);
-  }
-
-  const handleKeydown = useCallback(
-    e => {
-      if (!menuOpen) return;
-
-      if (e.which === 27 || e.key === "Escape") toggleMenu();
-    },
-    [menuOpen, toggleMenu],
-  );
+  let items = useRef([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      window.addEventListener("keydown", e => handleKeydown(e));
-
-      return () => {
-        window.removeEventListener("keydown", e => handleKeydown(e));
-      };
-    }, 100);
-  }, [handleKeydown]);
+    gsap.from(items.current, { yPercent: -450, stagger: 0.1, delay: 1 });
+  }, []);
 
   return (
     <HeadStickWrapper data-scroll data-scroll-sticky data-scroll-target="#___sticky">
       <Container>
         <NavWrapper id="header">
-          <LogoWrapper to="/">
+          <LogoWrapper to="/" ref={el => (items.current[0] = el)}>
             <Icon name="logo" />
           </LogoWrapper>
-          <CenterWrapper>
+          <CenterWrapper ref={el => (items.current[1] = el)}>
             <NavLinkWrapper>
               <NavLink href="">About</NavLink>
               <NavLink href="">Register</NavLink>
@@ -55,14 +34,8 @@ const Bar = () => {
               <NavLink href="">FAQ</NavLink>
             </NavLinkWrapper>
           </CenterWrapper>
-          <RightSideWrapper>
+          <RightSideWrapper ref={el => (items.current[2] = el)}>
             <Button to="/signup">Sign up now</Button>
-            <MenuButton aria-label="menu" onClick={toggleMenu}>
-              <BtnMenuBox menuOpen={menuOpen}>
-                <span />
-                <span />
-              </BtnMenuBox>
-            </MenuButton>
           </RightSideWrapper>
         </NavWrapper>
       </Container>

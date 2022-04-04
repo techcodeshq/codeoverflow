@@ -1,11 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useRef } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { Head, Nav, SmoothScroll } from "@components";
 import { GlobalStyle } from "@styles";
+import { gsap } from "gsap";
+import PropTypes from "prop-types";
 
 const Layout = ({ children, location }) => {
-  console.log(location);
+  let mainContainer = useRef(null);
+
+  // we need to do this or else there is a small flash before the content loads
+  useEffect(() => {
+    gsap.to(mainContainer, { opacity: 1, duration: 0.3 });
+  }, []);
+
   return (
     <StaticQuery
       query={graphql`
@@ -26,7 +33,7 @@ const Layout = ({ children, location }) => {
             <SmoothScroll callbacks={location} />
 
             <GlobalStyle />
-            <div id="___sticky">
+            <div id="___sticky" ref={el => (mainContainer = el)}>
               {location.pathname === "/" && <Nav location={location} />}
               <main>{children}</main>
             </div>

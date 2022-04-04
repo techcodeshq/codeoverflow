@@ -78,6 +78,9 @@ const GlobalStyle = createGlobalStyle`
     --undertone: #E4E4E4;
     --gray: #2B2B2B;
   }
+  #___sticky {
+    opacity: 0;
+  }
   main {
     position: relative;
   }

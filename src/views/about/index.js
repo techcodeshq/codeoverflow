@@ -46,32 +46,28 @@ const About = () => {
       { background: `linear-gradient(90deg, #BDD5EA) 0%, #F7F7FF 100%)` },
       1,
     )
-      .to(
+      .fromTo(
         rectWraps.current[0],
-        {
-          background: `linear-gradient(90deg, #F7F7FF 0%, #FE5F55 100%)`,
-        },
+        { background: `linear-gradient(90deg, #BDD5EA) 0%, #F7F7FF 100%)` },
+        { background: `linear-gradient(90deg, #F7F7FF 0%, #FE5F55 100%)` },
         1.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[0],
-        {
-          background: `linear-gradient(90deg, #FE5F55 0%, #FFBE0B 100%)`,
-        },
+        { background: `linear-gradient(90deg, #F7F7FF 0%, #FE5F55 100%)` },
+        { background: `linear-gradient(90deg, #FE5F55 0%, #FFBE0B 100%)` },
         2,
       )
-      .to(
+      .fromTo(
         rectWraps.current[0],
-        {
-          background: `linear-gradient(90deg, #FFBE0B 0%, #5041FF 100%)`,
-        },
+        { background: `linear-gradient(90deg, #FE5F55 0%, #FFBE0B 100%)` },
+        { background: `linear-gradient(90deg, #FFBE0B 0%, #5041FF 100%)` },
         2.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[0],
-        {
-          background: `linear-gradient(90deg, #5041FF 0%, #5041FF 100%)`,
-        },
+        { background: `linear-gradient(90deg, #FFBE0B 0%, #5041FF 100%)` },
+        { background: `linear-gradient(90deg, #5041FF 0%, #5041FF 100%)` },
         3,
       );
 
@@ -81,26 +77,28 @@ const About = () => {
       { background: `linear-gradient(90deg, #16BAC5 0%, #5FBFF9 100%)` },
       1,
     )
-      .to(
+      .fromTo(
         rectWraps.current[1],
+        { background: `linear-gradient(90deg, #16BAC5 0%, #5FBFF9 100%)` },
         { background: `linear-gradient(90deg, #5FBFF9 0%, #EFE9F4 100%)` },
         1.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[1],
+        { background: `linear-gradient(90deg, #5FBFF9 0%, #EFE9F4 100%)` },
         { background: `linear-gradient(90deg, #EFE9F4 0%, #5863F8 100%)` },
         2,
       )
-      .to(
+      .fromTo(
         rectWraps.current[1],
+        { background: `linear-gradient(90deg, #EFE9F4 0%, #5863F8 100%)` },
         { background: `linear-gradient(90deg, #5863F8 0%, #242038 100%)` },
         2.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[1],
-        {
-          background: `linear-gradient(90deg, #242038 0%, #242038 100%)`,
-        },
+        { background: `linear-gradient(90deg, #5863F8 0%, #242038 100%)` },
+        { background: `linear-gradient(90deg, #242038 0%, #242038 100%)` },
         3,
       );
 
@@ -110,26 +108,28 @@ const About = () => {
       { background: `linear-gradient(90deg, #00BFB2 0%, #F0F3BD 100%)` },
       1,
     )
-      .to(
+      .fromTo(
         rectWraps.current[2],
+        { background: `linear-gradient(90deg, #00BFB2 0%, #F0F3BD 100%)` },
         { background: `linear-gradient(90deg, #F0F3BD 0%, #C64191 100%)` },
         1.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[2],
+        { background: `linear-gradient(90deg, #F0F3BD 0%, #C64191 100%)` },
         { background: `linear-gradient(90deg, #C64191 0%, #554348 100%)` },
         2,
       )
-      .to(
+      .fromTo(
         rectWraps.current[2],
+        { background: `linear-gradient(90deg, #C64191 0%, #554348 100%)` },
         { background: `linear-gradient(90deg, #554348 0%, #08605F 100%)` },
         2.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[2],
-        {
-          background: `linear-gradient(90deg, #08605F 0%, #08605F 100%)`,
-        },
+        { background: `linear-gradient(90deg, #554348 0%, #08605F 100%)` },
+        { background: `linear-gradient(90deg, #08605F 0%, #08605F 100%)` },
         3,
       );
 
@@ -139,26 +139,28 @@ const About = () => {
       { background: `linear-gradient(90deg, #08415C 0%, #6B818C 100%)` },
       1,
     )
-      .to(
+      .fromTo(
         rectWraps.current[3],
+        { background: `linear-gradient(90deg, #08415C 0%, #6B818C 100%)` },
         { background: `linear-gradient(90deg, #6B818C 0%, #F1BF98 100%)` },
         1.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[3],
+        { background: `linear-gradient(90deg, #6B818C 0%, #F1BF98 100%)` },
         { background: `linear-gradient(90deg, #F1BF98 0%, #EEE5E9 100%)` },
         2,
       )
-      .to(
+      .fromTo(
         rectWraps.current[3],
+        { background: `linear-gradient(90deg, #F1BF98 0%, #EEE5E9 100%)` },
         { background: `linear-gradient(90deg, #EEE5E9 0%, #A4243B 100%)` },
         2.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[3],
-        {
-          background: `linear-gradient(90deg, #A4243B 0%, #A4243B 100%)`,
-        },
+        { background: `linear-gradient(90deg, #EEE5E9 0%, #A4243B 100%)` },
+        { background: `linear-gradient(90deg, #A4243B 0%, #A4243B 100%)` },
         3,
       );
 
@@ -168,43 +170,45 @@ const About = () => {
       { background: `linear-gradient(90deg, #ED254E 0%, #F9DC5C 100%)` },
       1,
     )
-      .to(
+      .fromTo(
         rectWraps.current[4],
+        { background: `linear-gradient(90deg, #ED254E 0%, #F9DC5C 100%)` },
         { background: `linear-gradient(90deg, #F9DC5C 0%, #F4FFFD 100%)` },
         1.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[4],
+        { background: `linear-gradient(90deg, #F9DC5C 0%, #F4FFFD 100%)` },
         { background: `linear-gradient(90deg, #F4FFFD 0%, #011936 100%)` },
         2,
       )
-      .to(
+      .fromTo(
         rectWraps.current[4],
+        { background: `linear-gradient(90deg, #F4FFFD 0%, #011936 100%)` },
         { background: `linear-gradient(90deg, #011936 0%, #7852E2 100%)` },
         2.5,
       )
-      .to(
+      .fromTo(
         rectWraps.current[4],
-        {
-          background: `linear-gradient(90deg, #7852E2 0%, #7852E2 100%)`,
-        },
+        { background: `linear-gradient(90deg, #011936 0%, #7852E2 100%)` },
+        { background: `linear-gradient(90deg, #7852E2 0%, #7852E2 100%)` },
         3,
       );
 
-    br.to(textWraps.current, { yPercent: 100, stagger: 0.15 }, 3.5);
+    br.to(textWraps.current, { autoAlpha: 0, yPercent: 100, stagger: 0.15 }, 3.5);
 
     br.to(rectWraps.current, { width: "88%", borderRadius: 75 }, 4.7)
-      .to(rectWraps.current[0], { yPercent: 192 }, 4.6)
-      .to(rectWraps.current[1], { yPercent: 150 }, 4.5)
-      .to(rectWraps.current[2], { yPercent: 109 }, 4.4)
-      .to(rectWraps.current[3], { yPercent: 67 }, 4.3)
-      .to(rectWraps.current[4], { yPercent: 28 }, 4.2)
-      .to(rectWraps.current[5], { yPercent: 142 }, 4.7)
-      .to(rectWraps.current[6], { yPercent: 144 }, 4.7)
-      .to(rectWraps.current[7], { yPercent: 146 }, 4.7)
-      .to(rectWraps.current[8], { yPercent: 148 }, 4.7)
-      .to(rectWraps.current[9], { yPercent: 150 }, 4.7)
-      .to(rectWraps.current[10], { yPercent: 152 }, 4.7);
+      .to(rectWraps.current[0], { top: "unset", bottom: "-38%" }, 4.6)
+      .to(rectWraps.current[1], { top: "unset", bottom: "-39%" }, 4.5)
+      .to(rectWraps.current[2], { top: "unset", bottom: "-40%" }, 4.4)
+      .to(rectWraps.current[3], { top: "unset", bottom: "-41%" }, 4.3)
+      .to(rectWraps.current[4], { top: "unset", bottom: "-42%" }, 4.2)
+      .to(rectWraps.current[5], { yPercent: 0, top: "unset", bottom: "-43%" }, 4.7)
+      .to(rectWraps.current[6], { yPercent: 0, top: "unset", bottom: "-44%" }, 4.7)
+      .to(rectWraps.current[7], { yPercent: 0, top: "unset", bottom: "-45%" }, 4.7)
+      .to(rectWraps.current[8], { yPercent: 0, top: "unset", bottom: "-46%" }, 4.7)
+      .to(rectWraps.current[9], { yPercent: 0, top: "unset", bottom: "-47%" }, 4.7)
+      .to(rectWraps.current[10], { yPercent: 0, top: "unset", bottom: "-48%" }, 4.7);
 
     rectWraps.current.forEach((element, index) => {
       if (index > 4 && index < 11) {
@@ -223,17 +227,14 @@ const About = () => {
       br.set(
         element.parentElement,
         {
-          position: "absolute",
-          top: "50%",
-          height: "100%",
-          transform: "translateY(-50%)",
-          padding: "3vw 0",
+          height: "50vh",
+          padding: "4vmax 0",
         },
         5.5,
       );
     });
-    br.to(rectWraps.current, { height: "32vw" }, 4);
-    br.to(rectWraps.current, { transform: "none", top: "38%", stagger: 1 }, 6);
+    br.to(rectWraps.current, { height: "50vh" }, 4);
+    br.to(rectWraps.current, { transform: "none", bottom: "14%", stagger: 0.8 }, 6);
 
     ScrollTrigger.create({
       trigger: scrollContainer,
@@ -429,8 +430,8 @@ const About = () => {
           <ScheduleWrapper>
             <TitleText>Schedule</TitleText>
             <NormalText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              Get ready for an unforgettable weekend! See below for what the biggest 24-hour high
+              school hackathon has to offer.
             </NormalText>
           </ScheduleWrapper>
         </Container>
@@ -441,12 +442,12 @@ const About = () => {
             </ContainerWrapper>
             <DescriptionWrapper>
               <NormalText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Code Overflow is a 24-hour high school hackathon hosted by TechCodes. Students
+                across NYC will come together to take part in group collaboration, workshops,
+                speaker panels, raffles, and compete in teams for the chance to win up to thousands
+                of dollars in prizes. All food, equipment, and security will be provided by
+                TechCodes, making this event completely cost-free. Get ready to meet new people and
+                have an amazing time.
               </NormalText>
             </DescriptionWrapper>
           </AboutWrapper>

@@ -19,6 +19,9 @@ export const ComputerWrapper = styled.div`
   color: var(--gray);
   z-index: 2;
 
+  ${media.thone`width: 85vw;`};
+  ${media.phablet`display: none;`};
+
   svg {
     width: inherit;
     height: inherit;
@@ -27,16 +30,27 @@ export const ComputerWrapper = styled.div`
 export const ResizeContainer = styled.div`
   overflow: hidden;
   width: 100%;
+  position: absolute;
 
   h1 {
     font-size: calc(11vw * var(--hero-resize));
-    ${media.thone`font-size: calc(12vw * var(--hero-resize));`};
+    ${media.thone`font-size: calc(18vw * var(--hero-resize));`};
+
+    @media (min-aspect-ratio: 8 / 5) {
+      font-size: calc(16vh * var(--hero-resize));
+    }
   }
   p {
     font-size: calc(1.5vw * var(--hero-resize));
 
-    ${media.tablet`font-size: calc(2vw * var(--hero-resize));`};
-    ${media.thone`font-size: calc(4vw * var(--hero-resize));`};
+    @media (min-aspect-ratio: 8 / 5) {
+      font-size: 2vh;
+    }
+
+    ${media.tablet`
+      font-size: calc(2vw * var(--hero-resize));
+    `};
+    ${media.thone`font-size: 16px;`};
   }
 `;
 export const MarqueeWrapper = styled(DisplayText)`
@@ -84,6 +98,8 @@ export const CardWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${media.thone`flex-direction: column;`};
 `;
 export const Card = styled.div`
   background-color: var(--secondary);
@@ -105,9 +121,25 @@ export const Card = styled.div`
     width: calc(40px * var(--hero-resize));
     height: calc(40px * var(--hero-resize));
     margin-right: calc(1vw * var(--hero-resize));
+
+    @media (min-aspect-ratio: 8 / 5) {
+      width: calc(4vh * var(--hero-resize));
+      height: calc(4vh * var(--hero-resize));
+      margin-right: calc(2vh * var(--hero-resize));
+    }
+
+    ${media.thone`
+      width: 18px;
+      margin-right: 10px;
+    `};
   }
 `;
 export const DescriptionWrapper = styled.div`
   width: calc(50% * var(--hero-resize));
   margin: 0 auto;
+
+  @media (min-aspect-ratio: 8 / 5) {
+    width: calc(45vh * var(--hero-resize));
+  }
+  ${media.thone`width: 90%;`};
 `;

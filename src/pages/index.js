@@ -1,12 +1,15 @@
 import React from "react";
-import { About, Hero, Team } from "@views";
+import { graphql } from "gatsby";
+import { About, Hero, Team, Gallery } from "@views";
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
   return (
     <>
       <Hero />
       <About />
-      <Team />
+      {/* <Team /> */}
+      {/* <Team /> */}
+      <Gallery data={data} />
       <h1>hi</h1>
       <h1>hi</h1>
       <h1>hi</h1>
@@ -74,3 +77,48 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const query = graphql`
+  {
+    gallery1: file(relativePath: { eq: "gallery/1.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery2: file(relativePath: { eq: "gallery/2.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery3: file(relativePath: { eq: "gallery/3.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery4: file(relativePath: { eq: "gallery/4.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery5: file(relativePath: { eq: "gallery/5.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery6: file(relativePath: { eq: "gallery/6.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery7: file(relativePath: { eq: "gallery/7.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+    gallery8: file(relativePath: { eq: "gallery/8.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 85)
+      }
+    }
+  }
+`;
