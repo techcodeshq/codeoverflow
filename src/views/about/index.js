@@ -251,7 +251,7 @@ const About = () => {
 
   return (
     <>
-      <SectionWrapper ref={el => (scrollContainer = el)}>
+      <SectionWrapper ref={el => (scrollContainer = el)} id="about">
         <TransitionWrapper>
           <RectWrap ref={el => (rectWraps.current[0] = el)}>
             <Container>

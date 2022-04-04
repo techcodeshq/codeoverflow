@@ -77,11 +77,7 @@ const Hero = () => {
           },
           0,
         )
-        .to(
-          compCon,
-          { scale: width < 1000 ? 5 : 3, transformOrigin: "50% 50%" },
-          0,
-        )
+        .to(compCon, { scale: width < 1000 ? 5 : 3, transformOrigin: "50% 50%" }, 0)
         .from(titleAnim.current[1], { width: "41vw" }, 0)
         .to(compCon, { autoAlpha: 0 }, 1)
         .from(cardAnim.current, { scale: 0, stagger: 0.1, ease: Power4.easeOut, duration: 1 }, 1)

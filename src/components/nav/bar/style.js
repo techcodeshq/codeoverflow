@@ -16,11 +16,13 @@ export const NavWrapper = styled.nav`
   margin-top: 2rem;
   transition: transform 0.35s ease;
 `;
-export const LogoWrapper = styled(Link)`
+export const LogoWrapper = styled.a`
   text-decoration: none;
   display: flex;
   align-self: center;
   flex: 0.5;
+  cursor: pointer;
+
   svg {
     width: 70px;
     height: 70px;
@@ -48,6 +50,23 @@ export const NavLink = styled.a`
   font-size: 18px;
   line-height: 100%;
   transition: color 0.1s linear;
+  cursor: pointer;
+
+  ${media.bigDesktop`padding: 18px;`};
+
+  :hover {
+    color: var(--theme);
+  }
+`;
+export const SignupLink = styled(Link)`
+  display: inline-block;
+  padding: 22px;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  transition: color 0.1s linear;
+  cursor: pointer;
 
   ${media.bigDesktop`padding: 18px;`};
 
