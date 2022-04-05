@@ -5,7 +5,6 @@ export const SectionWrapper = styled.section`
   position: relative;
   max-height: 100vh;
   width: 100vw;
-  color: var(--alwayswhite);
 `;
 export const AboutWrapper = styled.div`
   display: flex;
@@ -38,6 +37,7 @@ export const TransitionWrapper = styled.div`
   align-items: center;
   position: absolute;
   top: 0;
+  color: var(--alwayswhite);
 `;
 export const RectWrap = styled.div`
   --rect-height: calc(100% / 5);
