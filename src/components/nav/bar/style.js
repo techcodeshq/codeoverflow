@@ -1,6 +1,5 @@
-import styled, { keyframes, css } from "styled-components";
+import styled from "styled-components";
 import { media } from "@styles";
-import { Link } from "gatsby";
 
 export const HeadStickWrapper = styled.header`
   width: 100vw;
@@ -43,22 +42,6 @@ export const NavLinkWrapper = styled.div`
   border-radius: 70px;
 `;
 export const NavLink = styled.a`
-  display: inline-block;
-  padding: 22px;
-  color: var(--text);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
-  transition: color 0.1s linear;
-  cursor: pointer;
-
-  ${media.bigDesktop`padding: 18px;`};
-
-  :hover {
-    color: var(--theme);
-  }
-`;
-export const SignupLink = styled(Link)`
   display: inline-block;
   padding: 22px;
   color: var(--text);

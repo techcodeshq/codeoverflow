@@ -9,7 +9,6 @@ import {
   NavLink,
   RightSideWrapper,
   CenterWrapper,
-  SignupLink,
 } from "./style";
 import { Icon, Button } from "@components";
 
@@ -35,7 +34,12 @@ const Bar = () => {
                 onClick={() => window !== "undefined" && window.scroll.scroll.scrollTo("#about")}>
                 About
               </NavLink>
-              <SignupLink to="/signup">Register</SignupLink>
+              <NavLink
+                href="https://code.techcodes.org/signup"
+                rel="noopener noreferrer"
+                target="_blank">
+                Register
+              </NavLink>
               <NavLink
                 onClick={() => window !== "undefined" && window.scroll.scroll.scrollTo("#faq")}>
                 FAQ
@@ -43,7 +47,7 @@ const Bar = () => {
             </NavLinkWrapper>
           </CenterWrapper>
           <RightSideWrapper ref={el => (items.current[2] = el)}>
-            <Button to="/signup">Sign up now</Button>
+            <Button href="https://code.techcodes.org/signup">Sign up now</Button>
           </RightSideWrapper>
         </NavWrapper>
       </Container>

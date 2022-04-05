@@ -80,7 +80,7 @@ const SignupForm = () => {
                         type="text"
                         name="fname"
                         placeholder="First name"
-                        autocomplete="given-name"
+                        autoComplete="given-name"
                       />
                       <ErrorMessage component="span" name="fname" />
                     </FormGroup>
@@ -90,7 +90,7 @@ const SignupForm = () => {
                         type="text"
                         name="lname"
                         placeholder="Last name"
-                        autocomplete="family-name"
+                        autoComplete="family-name"
                       />
                       <ErrorMessage component="span" name="lname" />
                     </FormGroup>
@@ -105,7 +105,7 @@ const SignupForm = () => {
                         type="phoneNumber"
                         name="phoneNumber"
                         placeholder="Phone"
-                        autocomplete="phone"
+                        autoComplete="phone"
                       />
                       <ErrorMessage component="span" name="phoneNumber" />
                     </FormGroup>
@@ -115,7 +115,7 @@ const SignupForm = () => {
                         type="questions"
                         name="questions"
                         placeholder="FAQ"
-                        autocomplete="off"
+                        autoComplete="off"
                       />
                       <ErrorMessage component="span" name="questions" />
                     </FormGroup>
