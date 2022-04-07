@@ -3,3 +3,4 @@ export { default as About } from "./about";
 export { default as Team } from "./team";
 export { default as Gallery } from "./gallery";
 export { default as FAQ } from "./faq";
+export { default as Sponsors } from "./sponsors";

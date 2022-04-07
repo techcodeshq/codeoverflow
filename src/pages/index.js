@@ -1,11 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { About, Hero, Team, Gallery, FAQ } from "@views";
+import { About, Hero, Team, Gallery, FAQ, Sponsors } from "@views";
 
 const HomePage = ({ data }) => {
   return (
     <>
       <Hero />
+      <Sponsors />
       <About />
       {/* <Team /> */}
       {/* <Team /> */}
