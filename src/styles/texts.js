@@ -14,13 +14,6 @@ export const TitleText = styled.h1`
     font-size: 8vh;
   }
 
-  ${media.thone`font-size: 9vw;`};
-`;
-export const BigText = styled.p`
-  font-size: 4vw;
-  font-weight: 600;
-  line-height: 129%;
-
   span {
     padding: 0 1rem;
     border-radius: 15px;
@@ -31,14 +24,12 @@ export const BigText = styled.p`
     background-color: var(--orange);
   }
 
-  span.green {
-    color: var(--darkgreen);
-    background-color: var(--lightgreen);
-  }
-
-  span.purple {
-    background-color: var(--lightpurple);
-  }
+  ${media.thone`font-size: 9vw;`};
+`;
+export const BigText = styled.p`
+  font-size: 4vw;
+  font-weight: 600;
+  line-height: 129%;
 
   ${media.thone`font-size: 8vw;`};
 `;

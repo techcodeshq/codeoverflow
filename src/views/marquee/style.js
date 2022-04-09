@@ -5,6 +5,14 @@ export const SectionWrapper = styled.div`
   width: 100%;
   background-color: var(--accent);
 
+  p {
+    font-size: 4vw;
+    font-weight: 600;
+    line-height: 129%;
+
+    ${media.thone`font-size: 8vw;`};
+  }
+
   ${media.thone`padding: 6vw 0;`};
 `;
 export const MarqueeWrapper = styled(BigText)`

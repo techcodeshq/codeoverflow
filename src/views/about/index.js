@@ -438,7 +438,9 @@ const About = () => {
         <Container ref={el => (aboutText = el)}>
           <AboutWrapper>
             <ContainerWrapper>
-              <TitleText>The BIGGEST highschool-led hackathon in New York.</TitleText>
+              <TitleText>
+                The <span className="orange">BIGGEST</span> highschool-led hackathon in New York.
+              </TitleText>
             </ContainerWrapper>
             <DescriptionWrapper>
               <NormalText>
