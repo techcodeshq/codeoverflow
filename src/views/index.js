@@ -4,3 +4,6 @@ export { default as Team } from "./team";
 export { default as Gallery } from "./gallery";
 export { default as FAQ } from "./faq";
 export { default as Sponsors } from "./sponsors";
+export { default as Marquee } from "./marquee";
+export { default as CTA } from "./cta";
+export { default as Footer } from "./footer";

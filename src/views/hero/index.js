@@ -57,42 +57,44 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const br = gsap.timeline({ defaults: { ease: "linear" } });
+    if (width > 600) {
+      const br = gsap.timeline({ defaults: { ease: "linear" } });
 
-    br.from(resizeCon, { "--hero-resize": 0.7, bottom: 0 }, 0)
-      .from(
-        marqueeWrap,
-        {
-          bottom:
-            width < 520
-              ? "-40vw"
-              : width < 560
-              ? "-36vw"
-              : width < 600
-              ? "-32vw"
-              : width < 861
-              ? "-3vw"
-              : "2vw",
-        },
-        0,
-      )
-      .to(compCon, { scale: width < 1000 ? 5 : 3, transformOrigin: "50% 50%" }, 0)
-      .from(titleAnim.current[1], { width: "41vw" }, 0)
-      .to(compCon, { autoAlpha: 0 }, 1)
-      .from(cardAnim.current, { scale: 0, stagger: 0.1, ease: Power4.easeOut, duration: 1 }, 1)
-      .from(descriptionAnim, { opacity: 0, ease: Power4.easeOut, duration: 1 }, 1);
+      br.from(resizeCon, { "--hero-resize": 0.7, bottom: 0 }, 0)
+        .from(
+          marqueeWrap,
+          {
+            bottom:
+              width < 520
+                ? "-40vw"
+                : width < 560
+                ? "-36vw"
+                : width < 600
+                ? "-32vw"
+                : width < 861
+                ? "-3vw"
+                : "2vw",
+          },
+          0,
+        )
+        .to(compCon, { scale: width < 1000 ? 5 : 3, transformOrigin: "50% 50%" }, 0)
+        .from(titleAnim.current[1], { width: "41vw" }, 0)
+        .to(compCon, { autoAlpha: 0 }, 1)
+        .from(cardAnim.current, { scale: 0, stagger: 0.1, ease: Power4.easeOut, duration: 1 }, 1)
+        .from(descriptionAnim, { opacity: 0, ease: Power4.easeOut, duration: 1 }, 1);
 
-    ScrollTrigger.create({
-      trigger: scrollContainer,
-      scroller: "#___gatsby",
-      animation: br,
-      scrub: true,
-      end: "+=1000",
-      pin: true,
-    });
+      ScrollTrigger.create({
+        trigger: scrollContainer,
+        scroller: "#___gatsby",
+        animation: br,
+        scrub: true,
+        end: "+=1000",
+        pin: true,
+      });
 
-    ScrollTrigger.addEventListener("refresh", () => window.scroll.update());
-    ScrollTrigger.refresh();
+      ScrollTrigger.addEventListener("refresh", () => window.scroll.update());
+      ScrollTrigger.refresh();
+    }
   }, []);
 
   return (

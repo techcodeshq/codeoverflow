@@ -1,8 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { About, Hero, Team, Gallery, FAQ, Sponsors } from "@views";
+import { About, Hero, Team, Gallery, FAQ, Sponsors, Marquee, CTA, Footer } from "@views";
 
 const HomePage = ({ data }) => {
+  const footerDoc = data.allStrapiGlobal.edges.slice(0, 1).pop();
+
   return (
     <>
       <Hero />
@@ -12,6 +14,9 @@ const HomePage = ({ data }) => {
       {/* <Team /> */}
       <Gallery data={data} />
       <FAQ />
+      <Marquee />
+      <CTA />
+      <Footer data={footerDoc.node} />
     </>
   );
 };
@@ -20,6 +25,20 @@ export default HomePage;
 
 export const query = graphql`
   {
+    allStrapiGlobal {
+      edges {
+        node {
+          footer {
+            small_text
+            press_release {
+              localFile {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
     gallery1: file(relativePath: { eq: "gallery/1.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, quality: 85)
