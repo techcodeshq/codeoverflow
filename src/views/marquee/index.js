@@ -23,7 +23,7 @@ const Line = ({ reverse }) => {
         gsap.to(tween, { timeScale: isScrollingDown ? 1 : -1 });
       });
     }
-  }, []);
+  }, [reverse]);
 
   return (
     <MarqueeWrapper>
@@ -48,8 +48,8 @@ const Line = ({ reverse }) => {
 const Marquee = () => {
   return (
     <SectionWrapper>
-      <Line />
-      <Line reverse />
+      <Line key={0} />
+      <Line key={1} reverse />
     </SectionWrapper>
   );
 };
