@@ -11,6 +11,7 @@ export const CompWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 4vw;
+  overflow-x: hidden;
 `;
 export const ComputerWrapper = styled.div`
   position: absolute;
@@ -18,6 +19,7 @@ export const ComputerWrapper = styled.div`
   width: 60vw;
   color: var(--gray);
   z-index: 2;
+  overflow-x: hidden;
 
   ${media.thone`width: 85vw;`};
   ${media.phablet`display: none;`};

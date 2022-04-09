@@ -16,7 +16,7 @@ export const SectionWrapper = styled.div`
   ${media.thone`padding: 6vw 0;`};
 `;
 export const MarqueeWrapper = styled(BigText)`
-  padding: 2vw 0;
+  padding: 1vw 0;
   position: relative;
   overflow: hidden;
   font-weight: 600;
