@@ -73,7 +73,7 @@ const Hero = () => {
                 ? "-32vw"
                 : width < 861
                 ? "-3vw"
-                : "2vw",
+                : "0",
           },
           0,
         )
@@ -95,7 +95,7 @@ const Hero = () => {
       ScrollTrigger.addEventListener("refresh", () => window.scroll.update());
       ScrollTrigger.refresh();
     }
-  }, []);
+  }, [width]);
 
   return (
     <CompWrapper ref={el => (scrollContainer = el)}>

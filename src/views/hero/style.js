@@ -4,14 +4,14 @@ import { DisplayText, media } from "@styles";
 export const CompWrapper = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 4vw;
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 export const ComputerWrapper = styled.div`
   position: absolute;
