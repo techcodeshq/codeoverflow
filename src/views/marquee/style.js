@@ -4,6 +4,7 @@ import { BigText, media } from "@styles";
 export const SectionWrapper = styled.div`
   width: 100%;
   background-color: var(--accent);
+  padding: 0 0 6vw 0;
 
   p {
     font-size: 4vw;
@@ -13,8 +14,6 @@ export const SectionWrapper = styled.div`
 
     ${media.thone`font-size: 8vw;`};
   }
-
-  ${media.thone`padding: 6vw 0;`};
 `;
 export const MarqueeWrapper = styled(BigText)`
   padding: 1vw 0;
