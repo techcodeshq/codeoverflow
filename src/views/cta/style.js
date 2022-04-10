@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { media } from "@styles";
 
-export const PillWrapper = styled.section`
+export const SectionWrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  background-color: var(--foreground);
+`;
+export const PillWrapper = styled.div`
   background-color: var(--secondary);
-  border-radius: 845px;
   display: flex;
   align-items: center;
   justify-content: center;
