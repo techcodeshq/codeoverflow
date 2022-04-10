@@ -9,6 +9,7 @@ export const SectionWrapper = styled.div`
     font-size: 4vw;
     font-weight: 600;
     line-height: 129%;
+    margin: 0;
 
     ${media.thone`font-size: 8vw;`};
   }
