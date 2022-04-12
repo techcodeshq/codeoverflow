@@ -10,7 +10,6 @@ import {
   SectionWrapper,
   TextWrapper,
 } from "./style";
-import { useWindowSize } from "@hooks";
 import { NormalText, Container } from "@styles";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -20,7 +19,6 @@ const Gallery = ({ data }) => {
   let sectionContainer = useRef(null);
   let scaleWrapper = useRef(null);
   let grids = useRef([]);
-  const { width } = useWindowSize();
 
   useEffect(() => {
     const br = gsap.timeline({ defaults: { ease: "linear" } });
@@ -33,7 +31,7 @@ const Gallery = ({ data }) => {
       animation: br,
       scrub: true,
       end: "+=1000",
-      start: width > 600 ? "+=28% top" : "+=10% top",
+      start: "bottom bottom",
       pin: true,
     });
 

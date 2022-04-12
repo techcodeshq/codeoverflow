@@ -3,8 +3,7 @@ import { media } from "@styles";
 
 export const SectionWrapper = styled.section`
   background-color: var(--accent);
-  padding: 10vw 0;
-  overflow-x: hidden;
+  padding: 10vw 0 0 0;
 `;
 export const TextWrapper = styled.div`
   max-width: 30%;
@@ -48,14 +47,14 @@ export const GridWrapper = styled.div`
 `;
 export const ImageWrapper = styled.div`
   width: 35vw;
-  height: 25vw;
+  height: 45vh;
   margin-right: 20px;
   display: inline-block;
   margin-top: 2vw;
 
   ${media.thone`
-    width: 90vw;
-    height: 40vh;
+    width: 40vw;
+    height: 30vh;
   `};
 
   div {

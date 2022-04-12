@@ -5,6 +5,7 @@ export const SectionWrapper = styled.section`
   position: relative;
   max-height: 100vh;
   width: 100vw;
+  overflow: hidden;
 `;
 export const AboutWrapper = styled.div`
   display: flex;
