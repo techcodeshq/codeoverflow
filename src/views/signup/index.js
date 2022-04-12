@@ -11,6 +11,7 @@ import {
   FormWrapper,
   SmallText,
   SuccessSubmit,
+  MiddleWrapper,
 } from "./style";
 
 const phoneRegExp =
@@ -34,8 +35,20 @@ const SignupForm = () => {
     <>
       <SectionWrapper>
         <Container>
-          <Title>Register</Title>
-          <FormWrapper>
+          {/* <Title>Register</Title> */}
+          <MiddleWrapper>
+            <FormWrapper>
+              <SmallText>
+                Registrations are closed for the 2022 year. Don't worry, we still have a bunch of
+                cool events planned at{" "}
+                <a href="https://techcodes.org" rel="noopener noreferrer" target="_blank">
+                  techcodes.org
+                </a>
+                . We look forward to seeing you all soon :)
+              </SmallText>
+            </FormWrapper>
+          </MiddleWrapper>
+          {/* <FormWrapper>
             {success ? (
               <SuccessSubmit>
                 <SmallText>
@@ -130,7 +143,7 @@ const SignupForm = () => {
                 )}
               </Formik>
             )}
-          </FormWrapper>
+          </FormWrapper> */}
         </Container>
       </SectionWrapper>
       <Area>

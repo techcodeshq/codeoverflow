@@ -137,7 +137,24 @@ export const SmallText = styled.p`
   color: var(--undertone);
   ${media.tablet`font-size: 2vw;`};
   ${media.thone`font-size: 4vw;`};
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    :hover {
+      text-decoration: none;
+    }
+  }
 `;
 export const SuccessSubmit = styled.div`
+  text-align: center;
+`;
+export const MiddleWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 `;
