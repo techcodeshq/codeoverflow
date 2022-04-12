@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `TechCodes`,
-    description: `TechCodes is a student-led nonprofit organization dedicated to fostering computer science education to students of all backgrounds.`,
+    title: `Code Overflow | TechCodes`,
+    description: `Code Overflow is a 24-hour high school NYC hackathon hosted by TechCodes.`,
     siteUrl: `https://techcodes.org`,
     image: "/og.png",
     twitterUsername: "@techcodeshq",
