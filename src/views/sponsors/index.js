@@ -6,6 +6,9 @@ import StickerGiant from "@images/sponsors/sticker-giant.svg";
 import StickerMule from "@images/sponsors/sticker-mule.svg";
 import SunFoundation from "@images/sponsors/sun-foundation.svg";
 import ThePrincetonReview from "@images/sponsors/the-princeton-review.svg";
+import DigitalOcean from "@images/sponsors/digital-ocean-blue.svg";
+import VercelDark from "@images/sponsors/vercel-logotype-dark.svg";
+import HackClub from "@images/sponsors/hack-club.svg";
 import { LogoWrapper, SponsorWrapper } from "./style";
 import { Container } from "@styles";
 
@@ -20,6 +23,9 @@ const Sponsors = () => {
           <img src={StickerMule} alt="Sticker Mule" />
           <img src={SunFoundation} alt="Sun Foundation" />
           <img src={ThePrincetonReview} alt="The Princeton Review" />
+          <img src={DigitalOcean} alt="Digital Ocean" />
+          <img src={VercelDark} alt="Vercel" />
+          <img src={HackClub} alt="Hack Club" />
         </LogoWrapper>
       </Container>
     </SponsorWrapper>
