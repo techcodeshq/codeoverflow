@@ -17,11 +17,11 @@ export const LogoWrapper = styled.div`
     gap: 6vw;
 
     img {
-        width: 100%!important;
+        width: 100% !important;
     }
   `};
 
   img {
-    width: 10vw;
+    width: 9vw;
   }
 `;
