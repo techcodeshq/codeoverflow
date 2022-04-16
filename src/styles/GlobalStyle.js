@@ -30,6 +30,9 @@ const GlobalStyle = createGlobalStyle`
   *:after {
     box-sizing: border-box;
   }
+  #___gatsby {
+    overflow-x: hidden;
+  }
   body {
     margin: 0;
     min-width: 100vw;
